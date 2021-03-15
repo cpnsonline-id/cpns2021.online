@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>CPNSonline.id - Bimbel CPNS & PPPK No.1 di Indonesia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="CPNS Online Berani Lulus Murni, Satu-satunya bimbingan CAT CPNS Online di Indonesia yang memberi Anda garansi jika tidak lulus SKD, Bimbingan Belajara CPNS dan Seleksi CPNS 2021" />
+  <meta name="keywords"
+    content="cpnsonline.id, cpns 2021, bimbingan belajar cpns, cpnsonline, cpns online, cat cpns online, soal cpns online, try out cpns online, tryout cpns online, bimbel cpns" />
+  <meta content="Themesdesign" name="author" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/logoh.png">
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!-- HERO START -->
+  <section class="section bg-light position-relative mr-3 ml-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 col-md-offset-2 col-sm-12 mx-auto">
+          <h4 class="text-dark font-weight-bold feature-title mb-4 text-center">Silahkan isi form berikut terlebih
+            dahulu</h4>
+          <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/coid-2" method="POST">
+            <div class="form-group">
+              <label for="name">Nama lengkap <span class="red">*</span></label>
+              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Tulis nama Anda"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="phone">No HP <span class="red">*</span></label>
+              <input type="text" id="phone" name="phone" value="" class="form-control"
+                placeholder="Sebutkan nomor HP aktif Anda" pattern="[0]{1}[0-9]{8,12}" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Kota / Kabupaten Asal <span class="red">*</span></label>
+              <input type="text" name="address" id="address" value="" class="form-control"
+                placeholder="Masukkan Nama Kota / Kabupaten" required>
+            </div>
+            <div class="form-group">
+              <label for="note">Mau daftar CPNS/PPPK <span class="red">*</span></label>
+              <select name="note" id="note" placeholder="Pilih Paket" class="form-control" required>
+                <option value="CPNS">CPNS</option>
+                <option value="PPPK">PPPK</option>
+              </select>
+              <!-- <input type="text" name="note" id="note" value="" placeholder="Masukkan CPNS atau PPPK" required> -->
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Daftar Sekarang" class="loops-submit btn btn-lg btn-success">
+            </div>
+            <input type="hidden" id="current" name="current" value="">
+            <input type="hidden" name="redirect" value="">
+            <input type="hidden" name="_loops_nonce" value="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section><!-- FOOTER START -->
+  <footer class=" pb-4 position-relative bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-center mt-4">
+            <p class="text-muted f-15 mb-0">2021 © CPNSonline.id</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+  <!-- javascript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/scrollspy.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      ! function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 213794816762910);
+      fbq('addPixelId', 1264018510624305);
+      fbq('track', 'PageView');
+
+    });
+  </script>
+  <script>
+    var form = document.getElementById('form-order');
+    form.addEventListener('submit', function (e) {
+
+      if ("undefined" != typeof fbq) {
+
+        fbq("track", "AddToWishlist", { "source": "loops.id", "version": "0.16.0" });
+
+      }
+    });
+  </script>
+</body>
+
+</html>
