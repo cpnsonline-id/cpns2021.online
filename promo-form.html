@@ -20,7 +20,6 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="css/icons.css" rel="stylesheet" type="text/css" />
   <link href="css/style.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
@@ -33,32 +32,43 @@
             untuk Info Promo
             <span class="text-danger">DISKON 50%</span>
           </h4>
-          <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/coid-2" method="POST">
+          <!-- <p>Silakan isi data diri Anda di bawah ini. Terima kasih</p> -->
+          <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/promo-coid" method="POST">
             <div class="form-group">
-              <label for="name">Nama lengkap <span class="text-danger">*</span></label>
-              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Tulis nama Anda"
+              <label for="name">Nama Anda <span class="text-danger">*</span></label>
+              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Masukkan Nama Anda"
                 required>
             </div>
             <div class="form-group">
-              <label for="phone">No HP <span class="text-danger">*</span></label>
+              <label for="phone">No. Whatsapp <span class="text-danger">*</span></label>
               <input type="text" id="phone" name="phone" value="" class="form-control"
-                placeholder="Sebutkan nomor HP aktif Anda" pattern="[0]{1}[0-9]{8,12}" required>
+                placeholder="Masukkan No. Whatsapp" pattern="[0]{1}[0-9]{8,12}" required>
             </div>
             <div class="form-group">
               <label for="address">Kota / Kabupaten Asal <span class="text-danger">*</span></label>
               <input type="text" name="address" id="address" value="" class="form-control"
-                placeholder="Masukkan Nama Kota / Kabupaten" required>
+                placeholder="Masukkan Kota Asal" required>
             </div>
             <div class="form-group">
               <label for="note">Mau daftar CPNS/PPPK <span class="text-danger">*</span></label>
-              <select name="note" id="note" placeholder="Pilih Paket" class="form-control" required>
+              <select name="note" id="note" class="form-control" required>
                 <option value="CPNS">CPNS</option>
                 <option value="PPPK">PPPK</option>
               </select>
-              <!-- <input type="text" name="note" id="note" value="" placeholder="Masukkan CPNS atau PPPK" required> -->
+              <!-- <textarea name="note" id="note" cols="30" rows="2" placeholder="Masukkan CPNS/PPPK"></textarea> -->
             </div>
             <div class="form-group">
-              <input type="submit" value="Kirim Pesan" class="loops-submit btn btn-lg btn-success">
+              <label for="variants-input">Pilih Paket <span class="text-danger">*</span></label>
+              <select id="variants" name="variants[Paket]" class="form-control" required>
+                <option value="">Pilih Paket</option>
+                <option value="Premium">Premium</option>
+                <option value="Platinum">Platinum</option>
+              </select>
+              <!-- <input id="variants-input" type="hidden" name="variants[qty]" min="1" value="1" placeholder="Jumlah"
+                required> -->
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Kirim Pesan" class="btn btn-lg btn-success loops-submit">
             </div>
             <input type="hidden" id="current" name="current" value="">
             <input type="hidden" name="redirect" value="">
@@ -87,7 +97,25 @@
   <script src="js/scrollspy.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script type="text/javascript">
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+      return false;
+    };
     $(document).ready(function () {
+      const paket = getUrlParameter('paket');
+      $("#variants").val(paket);
+
       ! function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {

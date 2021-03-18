@@ -1082,7 +1082,7 @@ p {
 
 .service-box {
   position: relative;
-  padding: 65px 30px 30px;
+  padding: 25px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-radius: 6px;
@@ -1215,6 +1215,11 @@ p {
   border-radius: 6px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.pricing-box p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25rem;
 }
 
 .pricing-box .pricing-icon {

@@ -28,26 +28,29 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8 col-md-offset-2 col-sm-12 mx-auto">
-          <h4 class="text-dark font-weight-bold feature-title mb-4 text-center">Silahkan isi form berikut terlebih
-            dahulu</h4>
+          <h4 class="text-dark font-weight-bold feature-title mb-4 text-center">Silahkan Kontak CS Kami di Whatsapp
+            untuk Info Promo
+            <span class="text-danger">DISKON 50%</span>
+          </h4>
+          <!-- <p>Silakan isi data diri Anda di bawah ini. Terima kasih</p> -->
           <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/udcd" method="POST">
             <div class="form-group">
-              <label for="name">Nama lengkap <span class="red">*</span></label>
-              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Masukkan nama Anda"
+              <label for="name">Nama Anda <span class="text-danger">*</span></label>
+              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Masukkan Nama Anda"
                 required>
             </div>
             <div class="form-group">
-              <label for="phone">No HP <span class="red">*</span></label>
+              <label for="phone">No. Whatsapp <span class="text-danger">*</span></label>
               <input type="text" id="phone" name="phone" value="" class="form-control"
-                placeholder="Masukkan Nomor HP/WA Anda" pattern="[0]{1}[0-9]{8,12}" required>
+                placeholder="Masukkan No. Whatsapp" pattern="[0]{1}[0-9]{8,12}" required>
             </div>
             <div class="form-group">
-              <label for="address">Kota / Kabupaten Asal <span class="red">*</span></label>
+              <label for="address">Kota / Kabupaten Asal <span class="text-danger">*</span></label>
               <input type="text" name="address" id="address" value="" class="form-control"
-                placeholder="Masukkan Nama Kota / Kabupaten" required>
+                placeholder="Masukkan Kota Asal" required>
             </div>
             <div class="form-group">
-              <label for="note">Mau daftar CPNS/PPPK <span class="red">*</span></label>
+              <label for="note">Mau daftar CPNS/PPPK <span class="text-danger">*</span></label>
               <select name="note" id="note" placeholder="Pilih Paket" class="form-control" required>
                 <option value="CPNS">CPNS</option>
                 <option value="PPPK">PPPK</option>
@@ -55,7 +58,7 @@
               <!-- <textarea name="note" id="note" cols="30" rows="2" placeholder="Masukkan CPNS/PPPK"></textarea> -->
             </div>
             <div class="form-group">
-              <input type="submit" value="Daftar Sekarang" class="btn btn-lg btn-success loops-submit">
+              <input type="submit" value="Kirim Pesan" class="btn btn-lg btn-success loops-submit">
             </div>
             <input type="hidden" id="current" name="current" value="">
             <input type="hidden" name="redirect" value="">
