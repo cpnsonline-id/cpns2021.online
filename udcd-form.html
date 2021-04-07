@@ -24,62 +24,53 @@
 
 <body>
   <!-- HERO START -->
-  <section class="section bg-light position-relative mr-3 ml-3">
+  <section class="section bg-light position-relative">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8 col-md-offset-2 col-sm-12 mx-auto">
-          <h4 class="text-dark font-weight-bold feature-title mb-4 text-center">Silahkan Kontak CS Kami di Whatsapp
-            untuk Info Promo
-            <span class="text-danger">DISKON 50%</span>
-          </h4>
-          <!-- <p>Silakan isi data diri Anda di bawah ini. Terima kasih</p> -->
-          <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/udcd" method="POST">
-            <div class="form-group">
-              <label for="name">Nama Anda <span class="text-danger">*</span></label>
-              <input type="text" id="name" name="name" value="" class="form-control" placeholder="Masukkan Nama Anda"
-                required>
-            </div>
-            <div class="form-group">
-              <label for="phone">No. Whatsapp <span class="text-danger">*</span></label>
-              <input type="text" id="phone" name="phone" value="" class="form-control"
-                placeholder="Masukkan No. Whatsapp" pattern="[0]{1}[0-9]{8,12}" required>
-            </div>
-            <div class="form-group">
-              <label for="address">Kota / Kabupaten Asal <span class="text-danger">*</span></label>
-              <input type="text" name="address" id="address" value="" class="form-control"
-                placeholder="Masukkan Kota Asal" required>
-            </div>
-            <div class="form-group">
-              <label for="note">Mau daftar CPNS/PPPK <span class="text-danger">*</span></label>
-              <select name="note" id="note" placeholder="Pilih Paket" class="form-control" required>
-                <option value="CPNS">CPNS</option>
-                <option value="PPPK">PPPK</option>
-              </select>
-              <!-- <textarea name="note" id="note" cols="30" rows="2" placeholder="Masukkan CPNS/PPPK"></textarea> -->
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Kirim Pesan" class="btn btn-lg btn-success loops-submit">
-            </div>
-            <input type="hidden" id="current" name="current" value="">
-            <input type="hidden" name="redirect" value="">
-            <input type="hidden" name="_loops_nonce" value="">
-          </form>
-        </div>
-      </div>
-    </div>
-  </section><!-- FOOTER START -->
-  <footer class=" pb-4 position-relative bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="text-center mt-4">
-            <p class="text-muted f-15 mb-0">2021 © CPNSonline.id</p>
+          <div class="pricing-box bg-white p-5 position-relative">
+            <h4 class="text-dark font-weight-bold feature-title mb-4 text-center">Silahkan Kontak CS Kami di Whatsapp
+              untuk Info Promo
+              <span class="text-danger">DISKON 50%</span>
+            </h4>
+            <!-- <p>Silakan isi data diri Anda di bawah ini. Terima kasih</p> -->
+            <form id="form-order" class="loops-forms" action="https://app.loops.id/save-order/udcd" method="POST">
+              <div class="form-group">
+                <label for="name">Nama Anda <span class="text-danger">*</span></label>
+                <input type="text" id="name" name="name" value="" class="form-control" placeholder="Masukkan Nama Anda"
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="phone">No. Whatsapp <span class="text-danger">*</span></label>
+                <input type="text" id="phone" name="phone" value="" class="form-control"
+                  placeholder="Masukkan No. Whatsapp" pattern="[0]{1}[0-9]{8,12}" required>
+              </div>
+              <div class="form-group">
+                <label for="address">Kota / Kabupaten Asal <span class="text-danger">*</span></label>
+                <input type="text" name="address" id="address" value="" class="form-control"
+                  placeholder="Masukkan Kota Asal" required>
+              </div>
+              <div class="form-group">
+                <label for="note">Mau daftar CPNS/PPPK <span class="text-danger">*</span></label>
+                <select name="note" id="note" placeholder="Pilih Paket" class="form-control" required>
+                  <option value="">Pilih Paket</option>
+                  <option value="CPNS">CPNS</option>
+                  <option value="PPPK">PPPK</option>
+                </select>
+                <!-- <textarea name="note" id="note" cols="30" rows="2" placeholder="Masukkan CPNS/PPPK"></textarea> -->
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Kirim Pesan" class="btn btn-lg btn-success loops-submit">
+              </div>
+              <input type="hidden" id="current" name="current" value="">
+              <input type="hidden" name="redirect" value="">
+              <input type="hidden" name="_loops_nonce" value="">
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- FOOTER END -->
+  </section>
 
   <!-- javascript -->
   <script src="js/jquery.min.js"></script>
@@ -106,6 +97,7 @@
       }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', 213794816762910);
       fbq('addPixelId', 1264018510624305);
+      fbq('addPixelId', 424793562234441);
       fbq('track', 'PageView');
 
     });
