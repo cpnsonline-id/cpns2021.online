@@ -20,6 +20,37 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="css/icons.css" rel="stylesheet" type="text/css" />
   <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <!-- Global site tag (gtag.js) - Google Ads: 388976035 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-388976035"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-388976035');
+  </script>
+
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PJ2K5GW');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126386100-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126386100-1');
+  </script>
 </head>
 
 <body>
@@ -52,20 +83,11 @@
             <div class="form-group">
               <label for="note">Mau daftar CPNS/PPPK <span class="text-danger">*</span></label>
               <select name="note" id="note" class="form-control" required>
+                <option value="">Pilih Paket</option>
                 <option value="CPNS">CPNS</option>
                 <option value="PPPK">PPPK</option>
               </select>
               <!-- <textarea name="note" id="note" cols="30" rows="2" placeholder="Masukkan CPNS/PPPK"></textarea> -->
-            </div>
-            <div class="form-group">
-              <label for="variants-input">Pilih Paket <span class="text-danger">*</span></label>
-              <select id="variants" name="variants[Paket]" class="form-control" required>
-                <option value="">Pilih Paket</option>
-                <option value="Premium">Premium</option>
-                <option value="Platinum">Platinum</option>
-              </select>
-              <!-- <input id="variants-input" type="hidden" name="variants[qty]" min="1" value="1" placeholder="Jumlah"
-                required> -->
             </div>
             <div class="form-group">
               <input type="submit" value="Kirim Pesan" class="btn btn-lg btn-success loops-submit">
