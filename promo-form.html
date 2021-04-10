@@ -164,12 +164,24 @@
     var form = document.getElementById('form-order');
     form.addEventListener('submit', function (e) {
 
+      gtag_report_conversion();
       if ("undefined" != typeof fbq) {
 
         fbq("track", "AddToWishlist", { "source": "loops.id", "version": "0.16.0" });
-
       }
     });
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-388976035/ULLpCK6AmYACEKObvbkB',
+        'event_callback': callback
+      });
+      return false;
+    }
   </script>
 </body>
 
